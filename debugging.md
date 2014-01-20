@@ -1,6 +1,5 @@
 #Debuging guide
-Guide of things common basic debugging traps I normally fall into.
-
+Guide of things common basic debugging traps that I've fallen into over the years and I've seen others fall into.
 
 ##General
 
