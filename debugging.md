@@ -24,6 +24,9 @@ Guide of things common basic debugging traps that I've fallen into over the year
 * Do you have whitespace in the right place?
 * Do you fully understand how a function / feature is supposed to work? Either speak up and ask or spend some time with the documentation.
 * If you are working on anything non-trivial put it under source control. That way you can compare previous known working versions of the code to the current failing version.
+* If something works on one computer but not another verify that all libraries and dependancies are the same. 
+	* Also ensure that everything else is the same:OS runtime library, dependencies etc. A small version number difference can break things.
+
 
 ##C/ C++
 * Is your compiler setup properly?
