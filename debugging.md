@@ -9,14 +9,15 @@ Guide of things common basic debugging traps that I've fallen into over the year
 * Look at the output, what does it tell you? Read it carefully and slowly.
 * Which source file does the issue occur in? 
 	* Which function? 
- 		* Which line?
-  	 		* What specific statement?
-	  	 		* Start answering the first question and go deeper.
+	* Which line?
+  	* What specific statement?
+	* Start answering the first question and go deeper.
 * What values do you think your variables have? Print these values to screen to verify what they are.
 * Be very liberal with your debug print statements. Put them before and after where you suspect the problem is happening.
 * Are you loading the right file?
 * Are you *sure* you're loading the right file?
 * Is there some caching going on anywhere on the OS/Server/Compiler/Browser/Proxy level?
+	* Always logout and then login after clearing your cache 
 * Are all of your variables correctly spelled?
 * Are your variable and function names spelled correctly?
 * Do you have semi-colons in the right place?
@@ -40,6 +41,7 @@ Guide of things common basic debugging traps that I've fallen into over the year
 * Are your files set to the right permissions?
 * Is there a break in network connectivity? (CDN down, remote server unavailable etc).
 * Do a cache clear and force reload.
+* Make sure the error log is turned on
 * Check the error log for an extra clues that may not have been displayed on screen (usually in the Apache error log)
 * Are your `ini` file settings in order?
 * Did you get the `needle` `haystack` order right? Double check on PHP.net, or your IDE's code hinting.
