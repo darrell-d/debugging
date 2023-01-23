@@ -1,7 +1,7 @@
-#Debuging guide
+# Debuging guide
 Guide of things common basic debugging traps that I've fallen into over the years and I've seen others fall into. On any given day these questions run through my mind as I encounter strange behavior or when something isn't working right. They may seem obvious but I wanted to get them down and onto paper so I can have something to reference when it's 4AM and the deadline is at 8AM. Also this should hopefully be helpful to newcomers
 
-##General
+## General
 
 * Don't panic!
 * What do you expect to happen?
@@ -29,14 +29,14 @@ Guide of things common basic debugging traps that I've fallen into over the year
 	* Also ensure that everything else is the same:OS runtime library, dependencies etc. A small version number difference can break things.
 
 
-##C/ C++
+## C/ C++
 * Is your compiler setup properly?
 * Do you have all of the required header files?
 * Segfault? Ctrl + z.
  * If you have a segfault it means you probably did something funky with a pointer, so start your search with pointers. Wikipedia has a decent [write up on segfaults](http://en.wikipedia.org/wiki/Segmentation_fault)
      * Learn to use pointers properly. It will save your life
 
-##PHP
+## PHP
 
 * Are your files set to the right permissions?
 * Is there a break in network connectivity? (CDN down, remote server unavailable etc).
@@ -47,12 +47,12 @@ Guide of things common basic debugging traps that I've fallen into over the year
 * Did you get the `needle` `haystack` order right? Double check on PHP.net, or your IDE's code hinting.
 
 
-##Javascript
+## Javascript
 
 * Are you sure the feature you are trying to use is available on the browser you are testing on? See what happens on other browsers.
 * If you get an error `TypeError: Cannot call method 'yourMethodName' of null` or something similar to it, chances are that you are attempting to access a DOM element before it is loaded. Place your code in side a `$(document).ready(function(){/*Code Here*/});` call. No JQuery? Use `document.addEventListener("DOMContentLoaded", function() {/*Code Here*/}, false);` instead.
 
-### Jquery
+## Jquery
 
 * Are you running the script in a `$(document).ready(function(){/*Code here*/ });`?
 * Are you sure you have the format `$(document).ready(function(){/*Code here*/ });` and not `$(document).ready(){/*Code here*/ }`?
